@@ -1,5 +1,7 @@
+# BLR: An Intelligent Library Book Finder
+
 ## System Architecture:
-![[system_architecture.png]]
+![system_architecture](system_architecture.png)
 ```
                         +-------------------+
                         |    User/Client    |
