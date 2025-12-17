@@ -1,7 +1,7 @@
 # BLR: An Intelligent Library Book Finder
 
 ## System Architecture:
-![system_architecture](system_architecture.png)
+![system_architecture](method.png)
 
 ### Communication Flow
 - **User/Client** interacts with the robot via network (WiFi, app, web interface).
