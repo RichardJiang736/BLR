@@ -1,40 +1,8 @@
+# BLR: An Intelligent Library Book Finder
+
 ## System Architecture:
-![[system_architecture.png]]
-```
-                        +-------------------+
-                        |    User/Client    |
-                        +-------------------+
-                                |
-                                |   (WiFi, Web, Mobile App)
-                                v
-                        +-------------------+
-                        |   Raspberry Pi    |  <--- Main "Brain"
-                        |  (CleanIt, SLAM,  |
-                        |  Navigation, API) |
-                        +-------------------+
-                         |         |        |
-              (USB, UART)|         |        | (Network)
-                         |         |        |
-         +-----------------+   +-------+   +-------------------+
-         |   Arduino MCU   |   | Lidar |   | Library Database  |
-         | (Motor/Servo,   |   |Sensor |   | (Shelf Locator,   |
-         |  Sensor I/O)    |   |       |   |   Book Query)     |
-         +-----------------+   +-------+   +-------------------+
-                 |                ^
-                 |                |
-          +--------------+        |
-          |  Motors      |        |
-          |  Bumpers     |        |
-          |  Encoders    |        |
-          +--------------+        |
-                                  |
-                                  v
-                          +---------------+
-                          |  Other Sensors|
-                          | (Gyro, IR,    |
-                          |  Ultrasonic)  |
-                          +---------------+
-```
+![system_architecture](system_architecture.png)
+
 ### Communication Flow
 - **User/Client** interacts with the robot via network (WiFi, app, web interface).
 - **Raspberry Pi** runs the main software (CleanIt), processes commands, maps, and queries the library database.
